@@ -7,7 +7,7 @@ export default function Hero() {
     <section className="min-h-screen w-full flex flex-col items-center justify-end py-8">
       <div className="relative w-[80vw]">
 
-        <div className="flex items-end gap-[14rem] text-8xl font-montserrat text-accent mb-5 relative z-0 pl-[5%]">
+        <div className="flex items-end gap-56 font-light text-8xl font-montserrat text-accent mb-5 relative z-0 pl-[5%]">
         <h1>JBS</h1>
         <h1>London</h1>
         </div>
@@ -24,7 +24,7 @@ export default function Hero() {
             alt="Cheese Grater Building Project"
             width={450}
             height={900}
-            className="absolute bottom-0 left-[10%] h-[calc(100%+10rem)] w-auto z-10"
+            className="absolute bottom-0 left-[10%] h-[calc(100%+10rem)] w-auto z-10 opacity-95"
           />
         </div>
 
