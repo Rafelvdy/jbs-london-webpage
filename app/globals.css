@@ -37,18 +37,18 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --background-light: #161616;
-    --background-dark: #050505;
+    --background: #FFF8ED;
+    --background-light: #FFFBF6;
+    --background-dark: #F3EDE2;
 
-    --border-subtle: #2a2a2a;
-    --border-dark: #3a3a3a;
+    --border-subtle: #E8CDA3;
+    --border-dark: #CEB58E;
 
-    --accent: #a10a08;
+    --accent: #800504;
 
-    --foreground: #ededed;
-    --foreground-muted: #b8b8b8;
-    --foreground-light: #8a8a8a;
+    --foreground: #1E1A16;
+    --foreground-muted: #5F564D;
+    --foreground-light: #8A7E73;
   }
 }
 
@@ -57,3 +57,4 @@ body {
   color: var(--foreground);
   font-family: var(--font-sans), sans-serif;
 }
+
