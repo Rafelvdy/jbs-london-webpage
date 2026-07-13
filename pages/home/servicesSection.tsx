@@ -23,6 +23,7 @@ const services = [
     description:
       "Refurbishments and installations of all electrical and mechanical systems can be provided",
     className: "lg:col-span-4",
+    varient: "dark",
   },
   {
     title: "Building Fabric Maintenance",
@@ -41,10 +42,10 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="w-full px-10 py-16">
-      <h2 className="text-4xl font-display text-center mb-10">
+      <h2 className="text-6xl font-sans font-light text-center mb-10">
         What services do we offer?
       </h2>
-      <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 max-w-5xl mx-auto">
+      <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 max-w-5xl mx-auto mt-20">
         {services.map((service) => (
           <ServiceCard
             key={service.title}

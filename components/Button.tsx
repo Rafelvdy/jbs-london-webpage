@@ -29,7 +29,7 @@ export default function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`px-4 py-1 ${variantClasses[variant]} ${radiusClasses[radius]} ${className}`}
+      className={`px-4 py-1 cursor-pointer ${variantClasses[variant]} ${radiusClasses[radius]} ${className}`}
       {...props}
     >
       {children}

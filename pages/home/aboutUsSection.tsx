@@ -15,7 +15,7 @@ export default function Home() {
       />
       <h1 className="flex flex-row flex-wrap text-6xl gap-3 font-display z-1">
         <span className="text-accent tracking-[10%]">Military precision</span>
-        <span className="font-normal">brought to building services.</span>
+        <span className="font-light font-sans">brought to building services.</span>
       </h1>
       <p className="max-w-5xl mt-5 text-foreground-light">
         We pride ourselves on our long lasting relationships with our clients and
