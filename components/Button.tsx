@@ -18,6 +18,7 @@ const radiusClasses: Record<Radius, string> = {
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: Variant;
   radius?: Radius;
+  onClick?: () => void;
 }
 
 export default function Button({

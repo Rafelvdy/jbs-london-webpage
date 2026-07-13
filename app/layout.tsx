@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter, Montserrat, Space_Grotesk , Instrument_Serif} from "next/font/google";
 import "./globals.css";
+import NavBar from "@/components/NavBar";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -42,7 +43,10 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${montserrat.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col">{children}</body>
+      <body className="min-h-full flex flex-col">
+        <NavBar />
+        {children}
+      </body>
     </html>
   );
 }

@@ -1,3 +1,4 @@
+'use client';
 import Image from 'next/image';
 import Link from 'next/link';
 import Button from './Button';
@@ -10,18 +11,22 @@ export default function NavBar() {
                   border border-white/40
                   shadow-[0_8px_32px_rgba(0,0,0,0.12),inset_0_1px_0_rgba(255,255,255,0.6)]
                   rounded-full">
-    <Image src="/logo.png" alt="Logo" width={32} height={32} />
+    <Link href="/">
+        <Image src="/logo.png" alt="Logo" width={32} height={32} />
+    </Link>
 
     <ul className="absolute left-1/2 -translate-x-1/2 flex gap-10 font-inter text-thin text-foreground-muted [&_a:hover]:text-foreground [&_a]:transition-all [&_a]:duration-200">
       <li><Link href="/">Home</Link></li>
-      <li><Link href="/">Our services</Link></li>
-      <li><Link href="/">Our projects</Link></li>
-      <li><Link href="/">About us</Link></li>
+      <li><Link href="/services">Our services</Link></li>
+      <li><Link href="/projects">Our projects</Link></li>
+      <li><Link href="/about-us">About us</Link></li>
     </ul>
 
-    <Button variant="accent-outline" radius="xl" className="px-6 py-1 text-base whitespace-nowrap">
-      Contact us
-    </Button>
+    <Link href="/contact-us">
+      <Button variant="accent-outline" radius="xl" className="px-6 py-1 text-base whitespace-nowrap">
+        Contact us
+      </Button>
+    </Link>
   </div>
 </nav>  
     )
