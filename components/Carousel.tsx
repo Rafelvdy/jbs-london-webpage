@@ -30,23 +30,27 @@ export default function Carousel() {
         <div className="flex h-full">
           {images.map((src, i) => (
             <div key={i} className="relative flex-[0_0_100%] h-full">
-              <Image src={src} alt="" fill className="object-cover" />
+              <Image src={src} alt="" fill sizes="20vw" className="object-cover" />
             </div>
           ))}
         </div>
       </div>
 
       {/* Dot indicators */}
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex gap-1.5 z-10">
+      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex z-10">
         {images.map((_, i) => (
           <button
             key={i}
             onClick={() => emblaApi?.scrollTo(i)}
-            className={`size-2 rounded-full transition-colors duration-200 ${
-              i === selectedIndex ? 'bg-white' : 'bg-white/40'
-            }`}
+            className="size-6 flex items-center justify-center"
             aria-label={`Go to slide ${i + 1}`}
-          />
+          >
+            <span
+              className={`size-2 rounded-full transition-colors duration-200 ${
+                i === selectedIndex ? 'bg-white' : 'bg-white/40'
+              }`}
+            />
+          </button>
         ))}
       </div>
     </div>

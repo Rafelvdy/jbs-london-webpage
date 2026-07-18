@@ -11,7 +11,6 @@ interface LogoStripProps {
 }
 
 export default function LogoStrip({ logos, direction = 'left' }: LogoStripProps) {
-  // Duplicate for seamless infinite loop
   const doubled = [...logos, ...logos];
 
   return (

@@ -42,7 +42,7 @@ const services = [
 export default function ServicesSection() {
   return (
     <section className="w-full px-10 py-16">
-      <h2 className="text-6xl font-sans font-light text-center mb-10">
+      <h2 className="text-6xl text-foreground font-sans font-light text-center mb-10">
         What services do we offer?
       </h2>
       <div className="grid grid-cols-1 lg:grid-cols-6 gap-4 max-w-5xl mx-auto mt-20">

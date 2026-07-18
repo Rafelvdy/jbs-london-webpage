@@ -22,8 +22,9 @@ export default function Hero() {
           <Image
             src="/hero/cheese-grater-hero.webp"
             alt="Cheese Grater Building Project"
-            width={450}
-            height={900}
+            width={683}
+            height={1025}
+            priority
             className="absolute bottom-0 left-[10%] h-[calc(100%+10rem)] w-auto z-10 opacity-95"
           />
         </div>
