@@ -19,7 +19,7 @@ export default function ContactTextLink({ text, className }: ContactTextLinkProp
     return (
         <div className="flex flex-row items-center gap-2">
             <p className={`font-accent text-foreground-light cursor-pointer hover:underline underline-offset-2 transition-all ease-in-out ${className ?? ''}`} onClick={copyText}>{text}</p>
-            {copied && <span className="text-xs text-muted-foreground">Copied!</span>}  
+            {copied && <span className="text-xs text-muted-foreground">Copied!</span>}
         </div>
     )
 }
