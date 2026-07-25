@@ -26,11 +26,17 @@ export default function Carousel() {
 
   return (
     <div className="relative h-full w-full">
-      <div ref={emblaRef} className="h-full w-full overflow-hidden">
+      <div ref={emblaRef} className="h-full w-full overflow-hidden rounded-3xl">
         <div className="flex h-full">
           {images.map((src, i) => (
             <div key={i} className="relative flex-[0_0_100%] h-full">
-              <Image src={src} alt="" fill sizes="20vw" className="object-cover" />
+              <Image
+                src={src}
+                alt=""
+                fill
+                sizes="50vw"
+                className="object-cover"
+              />
             </div>
           ))}
         </div>
