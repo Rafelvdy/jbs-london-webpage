@@ -1,16 +1,19 @@
 import Image from 'next/image';
 import ContactTextLink from '@/components/ContactTextLink';
+import styles from './heroMobile.module.css';
 
 export default function HeroMobile() {
+
+
   return (
     <div className="w-full min-h-screen flex flex-col items-center justify-center px-4 py-10 gap-6">
-      <div className="w-full flex items-center justify-end -mb-3 gap-[32vw]">
+      <div className={`${styles.heroTitle} w-full flex items-center justify-end -mb-3 gap-[32vw]`}>
         <h1 className="font-light text-4xl sm:text-4xl md:text-5xl font-montserrat text-accent">JBS</h1>
         <h1 className="font-light text-4xl sm:text-4xl md:text-5xl font-montserrat text-accent">LONDON</h1>
       </div>
       <div className="relative w-full max-w-md sm:max-w-lg md:max-w-2xl bg-background-dark rounded-3xl flex flex-col items-center justify-end overflow-visible sm:p-8">
 
-        <div className="relative w-[90%] sm:w-[95%] md:w-[85%] aspect-3/4 -mt-24 sm:-mt-32 md:-mt-36">
+        <div className={`${styles.heroImage} relative w-[90%] sm:w-[95%] md:w-[85%] aspect-3/4 -mt-24 sm:-mt-32 md:-mt-36`}>
 
           <Image
             src="/hero/cheese-grater-hero.webp"
