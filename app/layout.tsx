@@ -44,7 +44,7 @@ export default function RootLayout({
       lang="en"
       className={`${inter.variable} ${montserrat.variable} ${spaceGrotesk.variable} ${instrumentSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col overflow-x-hidden">
+      <body className="min-h-full flex flex-col">
         <NavBar />
         {children}
         <Footer />

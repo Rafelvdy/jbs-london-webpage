@@ -4,8 +4,8 @@ import Link from 'next/link';
 
 export default function Footer() {
     return (
-        <footer className="w-full py-8 bg-background-light flex flex-col items-center gap-4">
-            <div className="flex flex-row w-full py-10 px-20">
+        <footer className="w-full py-8 bg-background-light flex flex-col items-center gap-4 overflow-x-hidden">
+            <div className="flex flex-col md:flex-row w-full py-10 px-6 sm:px-10 md:px-20 gap-10 md:gap-0">
                 <div className="flex flex-1 flex-col justify-start">
                     <div className="flex flex-row items-center gap-8">
                         <Image src="/logo.png" alt="Logo" width={64} height={64} />
@@ -17,7 +17,7 @@ export default function Footer() {
                         <ContactTextLink text="01732 752144" />
                     </div>
                 </div>
-                <div className="flex flex-1 flex-row justify-around font-sans font-light">
+                <div className="flex flex-1 flex-col sm:flex-row justify-around gap-10 sm:gap-4 font-sans font-light">
                     <div className="flex flex-col">
                         <h4 className="text-2xl text-foreground mb-3">Company</h4>
                         <ul className="text-foreground-muted [&>li]:mt-2 [&>li]:cursor-pointer [&>li]:hover:text-foreground text-md">
@@ -45,7 +45,7 @@ export default function Footer() {
                     </div>
                 </div>
             </div>
-            <p className="text-center text-sm text-foreground-light">
+            <p className="text-center text-sm text-foreground-light px-6">
                 &copy; {new Date().getFullYear()} JBS London Ltd. All rights reserved.
             </p>
         </footer>

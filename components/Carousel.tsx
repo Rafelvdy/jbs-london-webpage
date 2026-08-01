@@ -72,7 +72,7 @@ export default function Carousel() {
   }, [emblaApi, onSelect]);
 
   return (
-    <div className="relative h-full w-full">
+    <div className="relative h-full w-full overflow-x-hidden">
       <div ref={emblaRef} className="h-full w-full overflow-hidden rounded-3xl bg-black">
         <div className="flex h-full">
           {images.map((img, i) => (
