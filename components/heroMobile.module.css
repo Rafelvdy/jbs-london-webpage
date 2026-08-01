@@ -1,40 +1,6 @@
-@media (max-width: 375px) {
-   .heroImage {
-    margin-right: 50px;
-   };
-}
-
-@media (min-width: 376px) and (max-width: 393px) {
-    .heroImage {
-    margin-right: 45px;
-    }
-}
-
-@media (min-width: 394px) and (max-width: 412px) {
-    .heroImage {
-    margin-right: 40px;
-    }
-}
-
-@media (min-width: 413px) and (max-width: 428px) {
-    .heroImage {
-    margin-right: 37px;
-    }
-}
-
-@media (min-width: 429px) and (max-width: 459px) {
-    .heroImage {
-    margin-left: 1vw;
-    }
-}
-
-@media (min-width: 459px) and (max-width: 500px) {
-    .heroImage {
-    margin-left: 4vw;
-    }
-}
-
-@media (min-width: 501px) and (max-width: 1023px) {
+/* Horizontal image position is now computed at runtime in heroMobile.tsx
+   (measured against the JBS/LONDON gap), not via per-breakpoint margins. */
+@media (min-width: 501px) {
     .heroTitle {
         justify-content: center;
     }
