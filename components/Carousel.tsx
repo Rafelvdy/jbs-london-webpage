@@ -52,6 +52,7 @@ export default function Carousel() {
   const [autoplay] = useState(() => Autoplay({ delay: 5000, stopOnInteraction: false }));
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [autoplay]);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const dotsContainerRef = useRef<HTMLDivElement>(null);
   const dotRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const onSelect = useCallback((api: NonNullable<typeof emblaApi>) => {
@@ -75,12 +76,16 @@ export default function Carousel() {
   }, [emblaApi, onSelect]);
 
   // Keep the active dot in view when the dots overflow their container.
+  // Scroll the container directly (not scrollIntoView) so we don't drag
+  // the whole page's scroll position along with it.
   useEffect(() => {
-    dotRefs.current[selectedIndex]?.scrollIntoView({
-      behavior: 'smooth',
-      block: 'nearest',
-      inline: 'center',
-    });
+    const container = dotsContainerRef.current;
+    const dot = dotRefs.current[selectedIndex];
+    if (!container || !dot) return;
+
+    const target =
+      dot.offsetLeft - container.clientWidth / 2 + dot.clientWidth / 2;
+    container.scrollTo({ left: target, behavior: 'smooth' });
   }, [selectedIndex]);
 
   return (
@@ -129,6 +134,7 @@ export default function Carousel() {
       </div>
 
       <div
+        ref={dotsContainerRef}
         className="absolute bottom-3 left-1/2 z-10 flex max-w-[80%] -translate-x-1/2 gap-0.5 overflow-x-auto scroll-smooth scrollbar-none px-2"
       >
         {images.map((img, i) => (
