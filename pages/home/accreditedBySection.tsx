@@ -13,8 +13,8 @@ const logos = [
 
 export default function AccreditedBySection() {
     return (
-    <section className="w-full py-16 flex flex-col gap-6">
-      <h2 className="text-6xl font-sans font-light text-center mb-4">
+    <section className="w-full py-16 flex flex-col gap-6 overflow-x-hidden">
+      <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-sans font-light text-center mb-4 px-4">
         Accredited by
       </h2>
       <LogoStrip logos={logos} direction="right" />

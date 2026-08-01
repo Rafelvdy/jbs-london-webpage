@@ -1,8 +1,9 @@
 'use client';
 
 import useEmblaCarousel from 'embla-carousel-react';
+import Autoplay from 'embla-carousel-autoplay';
 import Image from 'next/image';
-import { useCallback, useEffect, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 
 type ProjectImage = {
   src: string;
@@ -48,8 +49,10 @@ const images: ProjectImage[] = rawImages.map((src) => ({
 }));
 
 export default function Carousel() {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const [autoplay] = useState(() => Autoplay({ delay: 5000, stopOnInteraction: false }));
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [autoplay]);
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const dotRefs = useRef<(HTMLButtonElement | null)[]>([]);
 
   const onSelect = useCallback((api: NonNullable<typeof emblaApi>) => {
     setSelectedIndex(api.selectedScrollSnap());
@@ -70,6 +73,15 @@ export default function Carousel() {
       emblaApi.off('reInit', handleSelect);
     };
   }, [emblaApi, onSelect]);
+
+  // Keep the active dot in view when the dots overflow their container.
+  useEffect(() => {
+    dotRefs.current[selectedIndex]?.scrollIntoView({
+      behavior: 'smooth',
+      block: 'nearest',
+      inline: 'center',
+    });
+  }, [selectedIndex]);
 
   return (
     <div className="relative h-full w-full overflow-x-hidden">
@@ -116,12 +128,20 @@ export default function Carousel() {
         {images[selectedIndex]?.name}
       </div>
 
-      <div className="absolute bottom-3 left-1/2 -translate-x-1/2 flex z-10">
+      <div
+        className="absolute bottom-3 left-1/2 z-10 flex max-w-[80%] -translate-x-1/2 gap-0.5 overflow-x-auto scroll-smooth scrollbar-none px-2"
+      >
         {images.map((img, i) => (
           <button
             key={img.src}
-            onClick={() => emblaApi?.scrollTo(i)}
-            className="size-6 flex items-center justify-center"
+            ref={(el) => {
+              dotRefs.current[i] = el;
+            }}
+            onClick={() => {
+              autoplay.stop();
+              emblaApi?.scrollTo(i);
+            }}
+            className="size-6 shrink-0 flex items-center justify-center"
             aria-label={`Go to ${img.name}`}
           >
             <span
