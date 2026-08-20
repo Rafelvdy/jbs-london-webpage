@@ -1,10 +1,9 @@
 'use client';
 
 import { useEffect, useRef } from "react";
-import { ChevronRight } from "lucide-react";
 import type { Service } from "@/data/services-data";
 
-type ServiceSelectorProps = {
+type ServiceListProps = {
   services: Service[];
   selectedIndex: number;
   onSelect: (index: number) => void;
@@ -16,7 +15,7 @@ export default function ServiceSelector({
   selectedIndex,
   onSelect,
   intervalMs = 4000,
-}: ServiceSelectorProps) {
+}: ServiceListProps) {
   const pausedRef = useRef(false);
   const timerRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
@@ -39,7 +38,7 @@ export default function ServiceSelector({
   };
 
   return (
-    <div className="bg-background-dark rounded-3xl p-3 flex flex-col gap-1 max-w-120">
+    <div className="bg-background-dark rounded-2xl sm:rounded-3xl p-2 sm:p-3 flex flex-col gap-1 h-fit">
       {services.map((service, index) => {
         const isSelected = index === selectedIndex;
 
@@ -48,14 +47,14 @@ export default function ServiceSelector({
             key={service.id}
             onClick={() => handleClick(index)}
             aria-current={isSelected}
-            className={`text-center px-5 py-2.5 text-lg rounded-xl transition-colors duration-200 flex items-center justify-between ${
+            className={`text-left px-4 sm:px-5 py-3 sm:py-3.5 rounded-xl transition-colors duration-200 flex items-center justify-between gap-3 text-sm sm:text-base ${
               isSelected
-                ? "bg-background-light text-foreground"
-                : "text-foreground-light hover:text-foreground"
+                ? "bg-background-light text-foreground font-medium"
+                : "text-foreground-light hover:text-foreground cursor-pointer"
             }`}
           >
-            <span>{service.title}</span>
-            {isSelected && <ChevronRight className="ml-3" />}
+            <span className="min-w-0 break-words">{service.title}</span>
+            {isSelected && <span className="shrink-0">&rarr;</span>}
           </button>
         );
       })}
