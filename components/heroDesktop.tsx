@@ -24,7 +24,7 @@ export default function HeroDesktop() {
               JBS LONDON
             </h1>
             <p className="font-sans lg:text-xl xl:text-2xl text-foreground-muted">
-              Mechanical and electrical building management solutions
+              All your building services, <br /> one contractor
             </p>
           </div>
           <div className="mb-5 self-end">

@@ -19,7 +19,7 @@ export default function Hero() {
           <div className="absolute rounded-2xl sm:rounded-3xl bottom-0 px-[clamp(1rem,3vw,2rem)] py-[clamp(1.25rem,3vw,2rem)] bg-linear-to-t from-black/80 via-black/30 to-transparent w-full">
             <div className="transition-transform duration-300 group-hover:-translate-y-2 delay-100">
               <h1 className="text-background-light font-medium font-montserrat leading-tight text-[clamp(1.4rem,3.6vw,2.75rem)]">
-                Reliable building services <br className="hidden sm:inline" /> that just work
+                Everything your commercial <br className="hidden sm:inline" /> property needs. 
               </h1>
               <p className="text-background-dark font-sans mt-2 max-w-md text-[clamp(0.8rem,1.4vw,1.0625rem)]">
                 We endeavour to provide clients with the best in quality-driven building maintenance and services.
