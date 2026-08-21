@@ -2,40 +2,42 @@ import ServiceCard from "@/components/ServiceCard";
 
 const services = [
   {
-    title: "Fire Door Testing",
-    description: "Fire Door Testing is available for commercial buildings",
-    className: "lg:col-span-2",
-  },
-  {
-    title: "Painting and Exterior",
+    title: "Mechanical Services & Maintenance",
     description:
-      "We can deliver high-quality refurbishments and paintwork",
-    className: "lg:col-span-2",
-  },
-  {
-    title: "Building Repairs and Refurbishments",
-    description:
-      "Our fully-qualified team of engineers can be on site or on call and work within CDM regulations",
-    className: "lg:col-span-2 lg:row-span-2",
-  },
-  {
-    title: "Mechanical and Electrical Installations",
-    description:
-      "Refurbishments and installations of all electrical and mechanical systems can be provided",
-    className: "lg:col-span-4",
+      "Planned and reactive mechanical maintenance for commercial buildings, including heating, pumps, plant, ventilation, valves and associated systems.",
+    className: "lg:col-span-3",
     varient: "dark",
+  },
+  {
+    title: "Electrical Services & Maintenance",
+    description:
+      "Full commercial electrical maintenance, testing, fault finding and repairs, together with new installations and alterations.",
+    className: "lg:col-span-3",
+    varient: "dark",
+  },
+  {
+    title: "Air Conditioning & HVAC",
+    description:
+      "Planned maintenance, servicing, fault finding, repairs and installation of commercial air-conditioning and HVAC systems.",
+    className: "lg:col-span-2",
+  },
+  {
+    title: "Plumbing & Water Services",
+    description:
+      "Commercial plumbing maintenance, repairs and installations, from reactive leaks through to new pipework and sanitary installations.",
+    className: "lg:col-span-2",
+  },
+  {
+    title: "Projects, Installations & Refurbishments",
+    description:
+      "Mechanical, electrical, plumbing and building works from small alterations through to larger installations, managed from survey to handover.",
+    className: "lg:col-span-2 lg:row-span-2",
   },
   {
     title: "Building Fabric Maintenance",
     description:
-      "Our highly skilled team will ensure your building occupants are in a fresh, comfortable environment",
-    className: "lg:col-span-3",
-  },
-  {
-    title: "Building Services Maintenance",
-    description:
-      "We offer planned preventative maintenance and reactionary work",
-    className: "lg:col-span-3",
+      "General building and fabric maintenance including painting, carpentry, doors and ironmongery, flooring, ceilings and general building works.",
+    className: "lg:col-span-4",
   },
 ];
 
