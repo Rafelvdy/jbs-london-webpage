@@ -22,7 +22,7 @@ export default function Hero() {
                 Everything your commercial <br className="hidden sm:inline" /> property needs. 
               </h1>
               <p className="text-background-dark font-sans mt-2 max-w-md text-[clamp(0.8rem,1.4vw,1.0625rem)]">
-                We endeavour to provide clients with the best in quality-driven building maintenance and services.
+                PPM programmes, reactive maintenance, 24/7 support and compliance works across mechanical, electrical, HVAC, plumbing and building fabric.
               </p>
               <Link href="/contact-us">
                 <Button
