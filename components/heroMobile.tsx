@@ -76,7 +76,7 @@ export default function HeroMobile() {
 
       <div className="w-full max-w-md sm:max-w-lg md:max-w-2xl bg-[#EFE7D8] rounded-3xl flex flex-col p-6 sm:p-8 gap-4 shadow-sm">
         <p className="font-sans text-sm sm:text-base text-foreground-muted">
-          Mechanical and electrical building management solutions
+          All your building services, <br /> one contractor
         </p>
         <div className="self-end text-right">
           <ContactTextLink className="text-end w-full" text="admin@jbslondon.co.uk" />

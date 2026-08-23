@@ -17,12 +17,7 @@ export default function Home() {
         <span className="font-light font-sans text-foreground">brought to building services.</span>
       </h1>
       <p className="max-w-5xl mt-5 text-center text-sm sm:text-base text-foreground-muted">
-        We pride ourselves on our long lasting relationships with our clients and
-        focusing on a strong client focus by providing a wide range of service
-        provisions with a continual commitment to develop best practises within
-        all aspect of our business. We have utilised our Military background to
-        bring a fantastic level of service, commitment and winning attitude to
-        every task we undertake.
+        We&apos;re your single point of contact for complete commercial building maintenance, mechanical, electrical, HVAC, plumbing and building fabric services. We&apos;ve utilised our Military background to bring fantastic service, commitment and a winning attitude to every task we undertake. From planned preventative maintenance and 24/7 support to emergency repairs and major refurbishments.
       </p>
       <Button variant="foreground-fill" radius="full" className="mt-10 self-center px-8 py-3">
         Find out more about us
