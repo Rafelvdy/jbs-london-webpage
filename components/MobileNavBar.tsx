@@ -10,6 +10,7 @@ const links = [
     { href: '/services', label: 'Our services' },
     { href: '/projects', label: 'Our projects' },
     { href: '/about-us', label: 'About us' },
+    { href: '/ethos', label: 'Ethos & values' },
 ];
 
 export default function MobileNavBar() {
