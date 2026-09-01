@@ -22,7 +22,7 @@ const values: Value[] = [
       "JBS London is committed to paperless operations as part of our commitment to reducing our environmental impact across every project.",
       "For every new contract we receive, we donate a percentage of the income to The Ocean Cleanup, an organisation using advanced technology to remove plastic and aiming to clean 90% of ocean plastic by 2040. Every contract awarded contributes towards cleaner oceans and a more sustainable future.",
     ],
-    image: "/ethos/Ocean-Cleanup.jpg",
+    image: "/ethos/Ocean-cleanup.jpg",
   },
   {
     title: "Supporting the Arts",
