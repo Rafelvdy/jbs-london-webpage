@@ -20,6 +20,7 @@ export default function DesktopNavBar() {
       <li><Link href="/services">Our services</Link></li>
       <li><Link href="/projects">Our projects</Link></li>
       <li><Link href="/about-us">About us</Link></li>
+      <li><Link href="/ethos">Ethos &amp; values</Link></li>
     </ul>
 
     <Link href="/contact-us">
